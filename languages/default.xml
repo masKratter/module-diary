@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<locale language="EN">
+
+ <!-- module -->
+ <text key="module-title">Module Diary</text>
+
+ <!-- alerts -->
+ <text key="trainingNotFound">The training was not found..</text>
+ <text key="trainingCreated">The training was created</text>
+ <text key="trainingUpdated">The training was updated</text>
+ <text key="trainingDeleted">The training was deleted</text>
+
+ <!-- logs -->
+ <text key="logs_module-diary_trainingCreated">Training [Created] {0} {1}</text>
+ <text key="logs_module-diary_trainingUpdated">Training [Updated] {0} {1}</text>
+ <text key="logs_module-diary_trainingDeleted">Training [Deleted] {0} {1}</text>
+
+ <!-- filters -->
+ <text key="filter-sport">Sport</text>
+ <text key="filter-run">Run</text>
+ <text key="filter-swim">Swim</text>
+ <text key="filter-bike">Bike</text>
+ <text key="filter-sort">Sort</text>
+ <text key="filter-slow">Slow</text>
+ <text key="filter-long">Long</text>
+ <text key="filter-fast">Fast</text>
+
+ <!-- sport -->
+ <text key="sport-run">Run</text>
+ <text key="sport-swim">Swim</text>
+ <text key="sport-bike">Bike</text>
+ 
+  <!-- sort -->
+ <text key="sort-slow">Slow</text>
+ <text key="sort-long">Long</text>
+ <text key="sort-fast">Fast</text>
+
+ <!-- diary.inc.php -->
+ <text key="module-diary-nav-list">Training list</text>
+ <text key="module-diary-nav-operations">Operations</text>
+ <text key="module-diary-nav-edit">Edit training</text>
+ <text key="module-diary-nav-delete">Delete training</text>
+ <text key="module-diary-nav-delete-confirm">Are you sure you want to delete this training?</text>
+ <text key="module-diary-nav-export">Export training</text>
+ <text key="module-diary-nav-add">Add training</text>
+
+ <!-- module-diary_list.php -->
+ <text key="module-diary_list-tr-unvalued">There are no training to show..</text>
+ <text key="module-diary_list-th-sport">Sport</text>
+ <text key="module-diary_list-th-sort">Sort</text>
+ <text key="module-diary_list-th-time">Time</text>
+ <text key="module-diary_list-th-distance">Distance</text>
+ <text key="module-diary_list-th-description">Description</text>
+ <text key="module-diary_list-th-datetraining">Datetraining</text>
+
+ <!-- module-diary_view.php -->
+ <text key="module-diary_view-dt-sport">Sport</text>
+ <text key="module-diary_view-dt-sort">Sort</text>
+ <text key="module-diary_view-dt-time">Time</text>
+  <text key="module-diary_view-dt-distance">Distance</text>
+  <text key="module-diary_view-dt-description">Description</text>
+  <text key="module-diary_view-dt-datetraining">Datetraining</text>
+
+ <!-- module-diary
+  _edit.php -->
+ <text key="module-diary_edit-ff-sport">Sport</text>
+ <text key="module-diary_edit-fo-sport-run">Run</text>
+ <text key="module-diary_edit-fo-sport-swim">Swim</text>
+ <text key="module-diary_edit-fo-sport-bike">Bike</text>
+ <text key="module-diary_edit-ff-sort">Sort</text>
+ <text key="module-diary_edit-fo-sort-slow">Slow</text>
+ <text key="module-diary_edit-fo-sort-long">Long</text>
+ <text key="module-diary_edit-fo-sort-fast">Fast</text>
+ <text key="module-diary_edit-ff-time">Time</text>
+ <text key="module-diary_edit-ff-time-placeholder">Insert the time 00:00:00</text>
+ <text key="module-diary_edit-ff-distance">Distance</text>
+ <text key="module-diary_edit-ff-distance-placeholder">Distance km</text>
+ <text key="module-diary_edit-ff-description">Description</text>
+ <text key="module-diary_edit-ff-description-placeholder">Insert the description</text>
+ <text key="module-diary_edit-ff-datetraining">Datetraining</text>
+ <text key="module-diary_edit-fc-submit">Submit</text>
+ <text key="module-diary_edit-fc-cancel">Cancel</text>
+
+</locale>
