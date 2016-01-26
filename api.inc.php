@@ -31,6 +31,10 @@ function api_moduleDiary_sportText($training){
   case "R":$return=api_text("sport-run");break;
   case "S":$return=api_text("sport-swim");break;
   case "B":$return=api_text("sport-bike");break;
+  case "T":$return=api_text("sport-trail");break;
+  case "W":$return=api_text("sport-snowshoes");break;
+  case "N":$return=api_text("sport-rest");break;
+
   default:$return="[Sport not found]";
  }
  return $return;
@@ -47,6 +51,7 @@ function api_moduleDiary_sortText($training){
   case "S":$return=api_text("sort-slow");break;
   case "L":$return=api_text("sort-long");break;
   case "F":$return=api_text("sort-fast");break;
+  case "N":$return=api_text("sort-rest");break;
   default:$return="[Sort not found]";
  }
  return $return;
@@ -80,7 +85,7 @@ function api_moduleDiary_trainings($search=NULL,$pagination=FALSE,$where=NULL){
  // conditions
  if(strlen($where)>0){$query_where="( ".$query_where." ) AND ( ".$where." )";}
  // order
- $query_order=api_queryOrder("`sport` ASC");
+ $query_order=api_queryOrder("`datetraining` DESC");
  // pagination
  if($pagination){
   $return->pagination=new str_pagination($query_table,$query_where,$GLOBALS['navigation']->filtersGet());
@@ -96,4 +101,25 @@ function api_moduleDiary_trainings($search=NULL,$pagination=FALSE,$where=NULL){
  return $return;
 }
 
+/**
+ * Trainings export
+ *
+ * @return object $results array
+ */
+function api_moduleDiary_trainings_export (){
+ // definitions
+ $return=new stdClass();
+ $return->results=array();
+ // generate query
+ $query_table="`module-diary_trainings`";
+ // fields
+ $query_fields="*";
+ // build query
+ $return->query= "SELECT ".$query_fields." FROM ".$query_table;
+ // execute query
+ $results=$GLOBALS['db']->query($return->query);
+ while($result=$GLOBALS['db']->fetchNextObject($results)){$return->results[$result->id]=api_moduleDiary_training($result);
+ // return objects
+ return $return;
+}}
 ?>
