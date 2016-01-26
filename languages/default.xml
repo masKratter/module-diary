@@ -21,20 +21,28 @@
  <text key="filter-run">Run</text>
  <text key="filter-swim">Swim</text>
  <text key="filter-bike">Bike</text>
+ <text key="filter-trail">Trail</text>
+ <text key="filter-snowshoes">Snowshoes</text>
+ <text key="filter-rest">Rest</text>
  <text key="filter-sort">Sort</text>
  <text key="filter-slow">Slow</text>
  <text key="filter-long">Long</text>
  <text key="filter-fast">Fast</text>
+ <text key="filter-rest">Rest</text>
 
  <!-- sport -->
  <text key="sport-run">Run</text>
  <text key="sport-swim">Swim</text>
  <text key="sport-bike">Bike</text>
- 
+ <text key="sport-trail">Trail</text>
+ <text key="sport-snowshoes">Snowshoes</text>
+ <text key="sport-rest">Rest</text>
+  
   <!-- sort -->
  <text key="sort-slow">Slow</text>
  <text key="sort-long">Long</text>
  <text key="sort-fast">Fast</text>
+ <text key="sort-rest">Rest</text>
 
  <!-- diary.inc.php -->
  <text key="module-diary-nav-list">Training list</text>
@@ -43,6 +51,7 @@
  <text key="module-diary-nav-delete">Delete training</text>
  <text key="module-diary-nav-delete-confirm">Are you sure you want to delete this training?</text>
  <text key="module-diary-nav-export">Export training</text>
+ <text key="module-diary-nav-export_list">Export training list</text>
  <text key="module-diary-nav-add">Add training</text>
 
  <!-- module-diary_list.php -->
@@ -68,10 +77,14 @@
  <text key="module-diary_edit-fo-sport-run">Run</text>
  <text key="module-diary_edit-fo-sport-swim">Swim</text>
  <text key="module-diary_edit-fo-sport-bike">Bike</text>
+ <text key="module-diary_edit-fo-sport-trail">Trail</text>
+ <text key="module-diary_edit-fo-sport-snowshoes">Snowshoes</text>
+ <text key="module-diary_edit-fo-sport-rest">Rest</text>
  <text key="module-diary_edit-ff-sort">Sort</text>
  <text key="module-diary_edit-fo-sort-slow">Slow</text>
  <text key="module-diary_edit-fo-sort-long">Long</text>
  <text key="module-diary_edit-fo-sort-fast">Fast</text>
+ <text key="module-diary_edit-fo-sort-rest">Rest</text>
  <text key="module-diary_edit-ff-time">Time</text>
  <text key="module-diary_edit-ff-time-placeholder">Insert the time 00:00:00</text>
  <text key="module-diary_edit-ff-distance">Distance</text>
@@ -81,5 +94,17 @@
  <text key="module-diary_edit-ff-datetraining">Datetraining</text>
  <text key="module-diary_edit-fc-submit">Submit</text>
  <text key="module-diary_edit-fc-cancel">Cancel</text>
-
+ 
+ <!-- module-diary_export.php -->
+ <text key="module-diary_export-title">Scheda di allenamento eseguito</text>
+ <text key="module-diary_export-sport">Sport</text>
+ <text key="module-diary_export-sort">Sort</text>
+ <text key="module-diary_export-time">Time</text>
+ <text key="module-diary_export-distance">Distance</text>
+ <text key="module-diary_export-description">Description</text>
+ <text key="module-diary_export-datetraining">Datetraining</text>
+ <text key="module-diary_export-page">Pagina</text>
+ <text key="module-diary_export-pageOf">di</text>
+ <text key="module-diary_export-footer">allenamento svolto</text>
+ 
 </locale>

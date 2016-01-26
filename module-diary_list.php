@@ -20,7 +20,7 @@ function content(){
  $trainings_table->addHeader(api_text("module-diary_list-th-time"),"nowarp",NULL,"`module-diary_trainings`.`time`");
  $trainings_table->addHeader(api_text("module-diary_list-th-distance"),"nowarp",NULL,"`module-diary_trainings`.`distance`");
  $trainings_table->addHeader(api_text("module-diary_list-th-datetraining"),"nowarp",NULL,"`module-diary_trainings`.`datetraining`");
- $trainings_table->addHeader(api_text("module-diary_list-th-description"),NULL,"100%");
+ $trainings_table->addHeader(api_text("module-diary_list-th-description"),NULL,"40%");
  // get trainings
  $trainings=api_moduleDiary_trainings($g_search,TRUE);
  foreach($trainings->results as $training){
@@ -34,7 +34,26 @@ function content(){
   $trainings_table->addField($training->sortText,"nowarp");;
   $trainings_table->addField($training->time,"nowarp");
   $trainings_table->addField($training->distance,"nowarp");
-  $trainings_table->addField($training->datetraining);
+  
+  
+  /**
+* Timestamp Format
+* @param string $timestamp MySql datetime
+* @param string $format datetime format ( php date format or language key )
+* @param string $language language conversion
+* @return string formatted date time
+*/
+//function api_timestampFormat($timestamp,$format="Y-m-d H:i:s",$language=NULL){
+  //$trainings_table->addField(api_timestampFormat($training->datetraining,"D-d-M-y"));  
+  
+  
+  
+  
+  
+  $training->datetraining = strtotime($training->datetraining); 
+  $giorno = date('D-d-M-y',$training->datetraining);
+  $trainings_table->addField($giorno);
+  //$trainings_table->addField($training->datetraining);
   $trainings_table->addField($training->description,"nowarp");
  }
  // show table

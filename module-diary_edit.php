@@ -13,10 +13,14 @@ function content(){
  $training_form->addFieldOption("R",api_text("module-diary_edit-fo-sport-run"),(!$training->id||"R"==$training->sport?TRUE:FALSE));
  $training_form->addFieldOption("S",api_text("module-diary_edit-fo-sport-swim"),("S"==$training->sport?TRUE:FALSE));
  $training_form->addFieldOption("B",api_text("module-diary_edit-fo-sport-bike"),("B"==$training->sport?TRUE:FALSE));
+ $training_form->addFieldOption("T",api_text("module-diary_edit-fo-sport-trail"),("T"==$training->sport?TRUE:FALSE));
+ $training_form->addFieldOption("W",api_text("module-diary_edit-fo-sport-snowshoes"),("W"==$training->sport?TRUE:FALSE));
+ $training_form->addFieldOption("N",api_text("module-diary_edit-fo-sport-rest"),("N"==$training->sport?TRUE:FALSE));
  $training_form->addField("radio","sort",api_text("module-diary_edit-ff-sort"),NULL,"inline");
  $training_form->addFieldOption("S",api_text("module-diary_edit-fo-sort-slow"),(!$training->id||"S"==$training->sort?TRUE:FALSE));
  $training_form->addFieldOption("L",api_text("module-diary_edit-fo-sort-long"),("L"==$training->sport?TRUE:FALSE));
  $training_form->addFieldOption("F",api_text("module-diary_edit-fo-sort-fast"),("F"==$training->sport?TRUE:FALSE));
+ $training_form->addFieldOption("N",api_text("module-diary_edit-fo-sort-rest"),("N"==$training->sport?TRUE:FALSE));
  $training_form->addField("text","time",api_text("module-diary_edit-ff-time"),$training->time,"input-medium",api_text("module-diary_edit-ff-time-placeholder"));
  $training_form->addField("text","distance",api_text("module-diary_edit-ff-distance"),$training->distance,"input-small",api_text("module-diary_edit-ff-distance-placeholder"));
  $training_form->addField("text","description",api_text("module-diary_edit-ff-description"),$training->description,"input-large",api_text("module-diary_edit-ff-description-placeholder"));
@@ -36,8 +40,8 @@ function content(){
   // validation
   $("form[name='training_edit']").validate({
    rules:{
-    sport:{required:true,minlength:3},
-    sort:{required:true,minlength:3}
+    sport:{required:true,minlength:1},
+    sort:{required:true,minlength:1}
    },
    submitHandler:function(form){form.submit();}
   });

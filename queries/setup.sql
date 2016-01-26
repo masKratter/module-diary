@@ -29,8 +29,8 @@ CREATE TABLE IF NOT EXISTS `module-template_addresses` (
 --
 
 INSERT INTO `settings_permissions` (`id`, `module`, `action`, `description`, `locked`) VALUES
-(NULL, 'module-template', 'address_view', 'View address', 0),
-(NULL, 'module-template', 'address_edit', 'Edit address', 0),
-(NULL, 'module-template', 'address_del', 'Delete address', 0);
+(NULL, 'module-diary', 'training_view', 'View training', 0),
+(NULL, 'module-diary', 'training_edit', 'Edit training', 0),
+(NULL, 'module-diary', 'training_del', 'Delete training', 0);
 
 -- --------------------------------------------------------
